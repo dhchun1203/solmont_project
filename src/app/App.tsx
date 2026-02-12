@@ -15,16 +15,18 @@ export default function App() {
   return (
     <>
       <Header />
-      <Hero />
-      <BrandEssence />
-      <FeaturedCollection />
-      <CraftAtelier />
-      <MaterialStory />
-      <Sustainability />
-      <LookbookGallery />
-      <StoreStockist />
-      <FinalCTA />
-      <Footer />
+      <main className="pt-20">
+        <Hero />
+        <BrandEssence />
+        <FeaturedCollection />
+        <CraftAtelier />
+        <MaterialStory />
+        <Sustainability />
+        <LookbookGallery />
+        <StoreStockist />
+        <FinalCTA />
+        <Footer />
+      </main>
       <ScrollToTop />
     </>
   );

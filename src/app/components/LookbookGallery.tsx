@@ -76,13 +76,13 @@ export default function LookbookGallery() {
             <X size={32} />
           </button>
           <div
-            className="max-w-4xl max-h-[90vh] w-full"
+            className="max-w-[90vw] max-h-[90vh] w-full flex items-center justify-center overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             <ImageWithFallback
               src={selectedImage}
               alt="Lookbook detail"
-              className="w-full h-full object-contain"
+              className="max-w-full max-h-[90vh] w-auto h-auto object-contain"
             />
           </div>
         </div>
