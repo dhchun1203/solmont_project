@@ -31,9 +31,9 @@ export default function CraftAtelier() {
             {/* Process Steps */}
             <div className="space-y-8">
               {processes.map((process) => (
-                <div key={process.number} className="flex gap-6">
+                <div key={process.number} className="flex gap-6 group/item cursor-default transition-opacity duration-300 hover:opacity-100">
                   <div
-                    className="text-4xl opacity-30"
+                    className="text-4xl opacity-30 group-hover/item:opacity-50 transition-opacity duration-300"
                     style={{ fontFamily: 'Cormorant, serif', fontWeight: 300 }}
                   >
                     {process.number}
@@ -58,11 +58,11 @@ export default function CraftAtelier() {
           </div>
 
           {/* Image (우측) */}
-          <div className="aspect-[4/5] overflow-hidden bg-gray-100">
+          <div className="aspect-[4/5] overflow-hidden bg-gray-100 group">
             <ImageWithFallback
               src="https://images.unsplash.com/photo-1673201230274-c4dbd20c3f79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYXNoaW9uJTIwYXRlbGllciUyMHdvcmtzaG9wfGVufDF8fHx8MTc3MDg3ODE3Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
               alt="Craft atelier"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
           </div>
         </div>

@@ -42,7 +42,7 @@ export default function FeaturedCollection() {
         {/* Collection Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           {collections.map((item) => (
-            <div key={item.id} className="group">
+            <a key={item.id} href="#collection" className="group block cursor-pointer">
               <div className="aspect-[3/4] mb-6 overflow-hidden bg-white">
                 <ImageWithFallback
                   src={item.image}
@@ -51,18 +51,18 @@ export default function FeaturedCollection() {
                 />
               </div>
               <h3
-                className="text-2xl mb-2 tracking-tight"
+                className="text-2xl mb-2 tracking-tight group-hover:opacity-80 transition-opacity duration-300"
                 style={{ fontFamily: 'Cormorant, serif', fontWeight: 400 }}
               >
                 {item.title}
               </h3>
               <p
-                className="text-sm opacity-70"
+                className="text-sm opacity-70 group-hover:opacity-90 transition-opacity duration-300"
                 style={{ fontFamily: 'Inter, sans-serif', fontWeight: 300 }}
               >
                 {item.description}
               </p>
-            </div>
+            </a>
           ))}
         </div>
       </div>

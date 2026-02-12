@@ -1,3 +1,4 @@
+import { ChevronDown } from 'lucide-react';
 import ImageWithFallback from './figma/ImageWithFallback';
 
 const HERO_BG_IMAGE =
@@ -5,7 +6,7 @@ const HERO_BG_IMAGE =
 
 export default function Hero() {
   return (
-    <section className="relative py-32 lg:py-48 overflow-hidden bg-[#FAFAF8]">
+    <section className="relative min-h-[calc(100vh-5rem)] flex items-center justify-center py-24 lg:py-32 overflow-hidden bg-[#FAFAF8]">
       {/* Background Image */}
       <div className="absolute inset-0 overflow-hidden">
         <ImageWithFallback
@@ -34,20 +35,39 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="#collection"
-            className="px-8 py-4 bg-black text-white text-sm tracking-widest hover:bg-black/80 transition-colors"
+            className="px-8 py-4 bg-black text-white text-sm tracking-widest hover:bg-black/80 active:scale-95 transition-all duration-300"
             style={{ fontFamily: 'Inter, sans-serif' }}
           >
             컬렉션 보기
           </a>
           <a
             href="#craft"
-            className="px-8 py-4 bg-transparent border border-black text-black text-sm tracking-widest hover:bg-black hover:text-white transition-colors"
+            className="px-8 py-4 bg-transparent border border-black text-black text-sm tracking-widest hover:bg-black hover:text-white active:scale-95 transition-all duration-300"
             style={{ fontFamily: 'Inter, sans-serif' }}
           >
             제작 과정
           </a>
         </div>
       </div>
+
+      {/* Scroll Down Indicator */}
+      <a
+        href="#collection"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-black/60 hover:text-black transition-colors duration-300 group"
+        aria-label="스크롤 다운"
+      >
+        <span
+          className="text-xs tracking-widest uppercase"
+          style={{ fontFamily: 'Inter, sans-serif', fontWeight: 400 }}
+        >
+          Scroll
+        </span>
+        <ChevronDown
+          size={24}
+          className="animate-bounce group-hover:animate-none"
+          strokeWidth={2}
+        />
+      </a>
     </section>
   );
 }

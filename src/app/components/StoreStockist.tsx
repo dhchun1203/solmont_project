@@ -49,7 +49,10 @@ export default function StoreStockist() {
         {/* Store Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {stores.map((store, index) => (
-            <div key={index} className="border border-black/10 p-8">
+            <div
+              key={index}
+              className="border border-black/10 p-8 cursor-default transition-all duration-300 hover:border-black/20 hover:shadow-sm"
+            >
               <h3
                 className="text-2xl mb-1 tracking-tight"
                 style={{ fontFamily: 'Cormorant, serif', fontWeight: 400 }}
@@ -82,7 +85,7 @@ export default function StoreStockist() {
         <div className="text-center mt-16">
           <a
             href="#contact"
-            className="inline-block px-8 py-4 border border-black text-black text-sm tracking-widest hover:bg-black hover:text-white transition-colors"
+            className="inline-block px-8 py-4 border border-black text-black text-sm tracking-widest hover:bg-black hover:text-white active:scale-95 transition-all duration-300"
             style={{ fontFamily: 'Inter, sans-serif' }}
           >
             예약하기

@@ -51,16 +51,16 @@ export default function MaterialStory() {
         {/* Materials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           {materials.map((material) => (
-            <div key={material.id}>
+            <div key={material.id} className="group cursor-default">
               <div className="aspect-[4/5] mb-6 overflow-hidden bg-white">
                 <ImageWithFallback
                   src={material.image}
                   alt={material.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
               <h3
-                className="text-2xl mb-1 tracking-tight"
+                className="text-2xl mb-1 tracking-tight group-hover:opacity-80 transition-opacity duration-300"
                 style={{ fontFamily: 'Cormorant, serif', fontWeight: 400 }}
               >
                 {material.name}

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 import ImageWithFallback from './figma/ImageWithFallback';
 
@@ -13,6 +13,20 @@ const lookbookImages = [
 
 export default function LookbookGallery() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setSelectedImage(null);
+    };
+    if (selectedImage) {
+      document.addEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'hidden';
+    }
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = '';
+    };
+  }, [selectedImage]);
 
   return (
     <section id="lookbook" className="py-24 lg:py-32 bg-[#FAFAF8]">
@@ -35,7 +49,7 @@ export default function LookbookGallery() {
               key={index}
               type="button"
               onClick={() => setSelectedImage(image)}
-              className="aspect-[3/4] overflow-hidden bg-white group cursor-pointer"
+              className="aspect-[3/4] overflow-hidden bg-white group cursor-pointer active:scale-[0.98] transition-transform duration-300"
             >
               <ImageWithFallback
                 src={image}
@@ -50,13 +64,13 @@ export default function LookbookGallery() {
       {/* Modal */}
       {selectedImage && (
         <div
-          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-6"
+          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-6 modal-backdrop"
           onClick={() => setSelectedImage(null)}
         >
           <button
             type="button"
             onClick={() => setSelectedImage(null)}
-            className="absolute top-6 right-6 text-white hover:opacity-70 transition-opacity"
+            className="absolute top-6 right-6 text-white hover:opacity-70 hover:scale-110 active:scale-95 transition-all duration-300"
             aria-label="Close modal"
           >
             <X size={32} />

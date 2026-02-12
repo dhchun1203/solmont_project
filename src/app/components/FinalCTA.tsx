@@ -19,7 +19,7 @@ export default function FinalCTA() {
 
         <a
           href="#contact"
-          className="inline-block px-10 py-5 bg-[#8B7355] text-white text-sm tracking-widest hover:bg-[#6F5B44] transition-colors"
+          className="inline-block px-10 py-5 bg-[#8B7355] text-white text-sm tracking-widest hover:bg-[#6F5B44] active:scale-95 transition-all duration-300"
           style={{ fontFamily: 'Inter, sans-serif' }}
         >
           프라이빗 뷰잉 요청하기

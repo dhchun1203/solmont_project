@@ -9,6 +9,7 @@ import LookbookGallery from './components/LookbookGallery';
 import StoreStockist from './components/StoreStockist';
 import FinalCTA from './components/FinalCTA';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
       <StoreStockist />
       <FinalCTA />
       <Footer />
+      <ScrollToTop />
     </>
   );
 }

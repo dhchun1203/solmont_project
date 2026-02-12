@@ -40,7 +40,10 @@ export default function Sustainability() {
         {/* Initiatives Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
           {initiatives.map((initiative, index) => (
-            <div key={index} className="text-center p-8 border border-black/10">
+            <div
+              key={index}
+              className="text-center p-8 border border-black/10 cursor-default transition-all duration-300 hover:border-black/20 hover:shadow-md"
+            >
               <div
                 className="text-5xl mb-4"
                 style={{ fontFamily: 'Cormorant, serif', fontWeight: 300 }}

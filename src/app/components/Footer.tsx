@@ -34,7 +34,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#collection"
-                  className="text-sm hover:opacity-60 transition-opacity"
+                  className="text-sm hover:opacity-60 transition-opacity duration-300"
                   style={{ fontFamily: 'Inter, sans-serif', fontWeight: 300 }}
                 >
                   컬렉션
@@ -43,7 +43,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#craft"
-                  className="text-sm hover:opacity-60 transition-opacity"
+                  className="text-sm hover:opacity-60 transition-opacity duration-300"
                   style={{ fontFamily: 'Inter, sans-serif', fontWeight: 300 }}
                 >
                   제작 과정
@@ -52,7 +52,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#sustainability"
-                  className="text-sm hover:opacity-60 transition-opacity"
+                  className="text-sm hover:opacity-60 transition-opacity duration-300"
                   style={{ fontFamily: 'Inter, sans-serif', fontWeight: 300 }}
                 >
                   지속가능성
@@ -61,7 +61,7 @@ export default function Footer() {
               <li>
                 <a
                   href="#stores"
-                  className="text-sm hover:opacity-60 transition-opacity"
+                  className="text-sm hover:opacity-60 transition-opacity duration-300"
                   style={{ fontFamily: 'Inter, sans-serif', fontWeight: 300 }}
                 >
                   매장 위치
@@ -81,7 +81,7 @@ export default function Footer() {
             <div className="space-y-3">
               <a
                 href="mailto:info@solmont.com"
-                className="flex items-center gap-2 text-sm hover:opacity-60 transition-opacity"
+                className="flex items-center gap-2 text-sm hover:opacity-60 transition-opacity duration-300"
                 style={{ fontFamily: 'Inter, sans-serif', fontWeight: 300 }}
               >
                 <Mail size={16} />
@@ -91,7 +91,7 @@ export default function Footer() {
                 href="https://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm hover:opacity-60 transition-opacity"
+                className="flex items-center gap-2 text-sm hover:opacity-60 transition-opacity duration-300"
                 style={{ fontFamily: 'Inter, sans-serif', fontWeight: 300 }}
               >
                 <Instagram size={16} />
@@ -120,14 +120,14 @@ export default function Footer() {
           <div className="flex gap-6">
             <a
               href="#"
-              className="text-xs opacity-50 hover:opacity-100 transition-opacity"
+              className="text-xs opacity-50 hover:opacity-100 transition-opacity duration-300"
               style={{ fontFamily: 'Inter, sans-serif', fontWeight: 300 }}
             >
               개인정보처리방침
             </a>
             <a
               href="#"
-              className="text-xs opacity-50 hover:opacity-100 transition-opacity"
+              className="text-xs opacity-50 hover:opacity-100 transition-opacity duration-300"
               style={{ fontFamily: 'Inter, sans-serif', fontWeight: 300 }}
             >
               서비스 약관

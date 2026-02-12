@@ -8,25 +8,25 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-[#FAFAF8]/95 backdrop-blur-sm border-b border-black/5">
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 py-6 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="text-2xl tracking-widest" style={{ fontFamily: 'Cormorant, serif', fontWeight: 400 }}>
+        <a href="#" className="text-2xl tracking-widest hover:opacity-70 transition-opacity duration-300" style={{ fontFamily: 'Cormorant, serif', fontWeight: 400 }}>
           SOLMONT
         </a>
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-10">
-          <a href="#collection" className="text-sm tracking-wider hover:opacity-60 transition-opacity" style={{ fontFamily: 'Inter, sans-serif' }}>
+          <a href="#collection" className="text-sm tracking-wider hover:opacity-60 transition-opacity duration-300" style={{ fontFamily: 'Inter, sans-serif' }}>
             컬렉션
           </a>
-          <a href="#craft" className="text-sm tracking-wider hover:opacity-60 transition-opacity" style={{ fontFamily: 'Inter, sans-serif' }}>
+          <a href="#craft" className="text-sm tracking-wider hover:opacity-60 transition-opacity duration-300" style={{ fontFamily: 'Inter, sans-serif' }}>
             제작 과정
           </a>
-          <a href="#sustainability" className="text-sm tracking-wider hover:opacity-60 transition-opacity" style={{ fontFamily: 'Inter, sans-serif' }}>
+          <a href="#sustainability" className="text-sm tracking-wider hover:opacity-60 transition-opacity duration-300" style={{ fontFamily: 'Inter, sans-serif' }}>
             지속가능성
           </a>
-          <a href="#stores" className="text-sm tracking-wider hover:opacity-60 transition-opacity" style={{ fontFamily: 'Inter, sans-serif' }}>
+          <a href="#stores" className="text-sm tracking-wider hover:opacity-60 transition-opacity duration-300" style={{ fontFamily: 'Inter, sans-serif' }}>
             매장 안내
           </a>
-          <a href="#contact" className="text-sm tracking-wider hover:opacity-60 transition-opacity" style={{ fontFamily: 'Inter, sans-serif' }}>
+          <a href="#contact" className="text-sm tracking-wider hover:opacity-60 transition-opacity duration-300" style={{ fontFamily: 'Inter, sans-serif' }}>
             문의
           </a>
         </div>
@@ -35,7 +35,7 @@ export default function Header() {
         <div className="hidden lg:block">
           <a
             href="#lookbook"
-            className="px-6 py-3 bg-[#8B7355] text-white text-sm tracking-wider hover:bg-[#6F5B44] transition-colors"
+            className="px-6 py-3 bg-[#8B7355] text-white text-sm tracking-wider hover:bg-[#6F5B44] hover:scale-105 active:scale-95 transition-all duration-300"
             style={{ fontFamily: 'Inter, sans-serif' }}
           >
             룩북 보기
@@ -44,7 +44,7 @@ export default function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden"
+          className="lg:hidden p-2 -m-2 hover:opacity-60 transition-opacity duration-300"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -56,24 +56,24 @@ export default function Header() {
       {isMenuOpen && (
         <div className="lg:hidden bg-[#FAFAF8] border-t border-black/5">
           <div className="px-6 py-8 flex flex-col gap-6">
-            <a href="#collection" className="text-sm tracking-wider" style={{ fontFamily: 'Inter, sans-serif' }} onClick={() => setIsMenuOpen(false)}>
+            <a href="#collection" className="text-sm tracking-wider hover:opacity-60 transition-opacity duration-300" style={{ fontFamily: 'Inter, sans-serif' }} onClick={() => setIsMenuOpen(false)}>
               컬렉션
             </a>
-            <a href="#craft" className="text-sm tracking-wider" style={{ fontFamily: 'Inter, sans-serif' }} onClick={() => setIsMenuOpen(false)}>
+            <a href="#craft" className="text-sm tracking-wider hover:opacity-60 transition-opacity duration-300" style={{ fontFamily: 'Inter, sans-serif' }} onClick={() => setIsMenuOpen(false)}>
               제작 과정
             </a>
-            <a href="#sustainability" className="text-sm tracking-wider" style={{ fontFamily: 'Inter, sans-serif' }} onClick={() => setIsMenuOpen(false)}>
+            <a href="#sustainability" className="text-sm tracking-wider hover:opacity-60 transition-opacity duration-300" style={{ fontFamily: 'Inter, sans-serif' }} onClick={() => setIsMenuOpen(false)}>
               지속가능성
             </a>
-            <a href="#stores" className="text-sm tracking-wider" style={{ fontFamily: 'Inter, sans-serif' }} onClick={() => setIsMenuOpen(false)}>
+            <a href="#stores" className="text-sm tracking-wider hover:opacity-60 transition-opacity duration-300" style={{ fontFamily: 'Inter, sans-serif' }} onClick={() => setIsMenuOpen(false)}>
               매장 안내
             </a>
-            <a href="#contact" className="text-sm tracking-wider" style={{ fontFamily: 'Inter, sans-serif' }} onClick={() => setIsMenuOpen(false)}>
+            <a href="#contact" className="text-sm tracking-wider hover:opacity-60 transition-opacity duration-300" style={{ fontFamily: 'Inter, sans-serif' }} onClick={() => setIsMenuOpen(false)}>
               문의
             </a>
             <a
               href="#lookbook"
-              className="px-6 py-3 bg-[#8B7355] text-white text-sm tracking-wider text-center"
+              className="px-6 py-3 bg-[#8B7355] text-white text-sm tracking-wider text-center hover:bg-[#6F5B44] transition-colors duration-300"
               style={{ fontFamily: 'Inter, sans-serif' }}
               onClick={() => setIsMenuOpen(false)}
             >

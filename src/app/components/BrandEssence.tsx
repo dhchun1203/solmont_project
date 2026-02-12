@@ -4,8 +4,8 @@ export default function BrandEssence() {
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20">
           {/* Tailoring */}
-          <div className="text-center">
-            <div className="w-px h-12 bg-black/20 mx-auto mb-8" />
+          <div className="text-center group cursor-default transition-transform duration-300 hover:-translate-y-1">
+            <div className="w-px h-12 bg-black/20 mx-auto mb-8 group-hover:h-14 group-hover:bg-black/30 transition-all duration-300" />
             <h3
               className="text-2xl lg:text-3xl mb-4 tracking-tight"
               style={{ fontFamily: 'Cormorant, serif', fontWeight: 400 }}
@@ -21,8 +21,8 @@ export default function BrandEssence() {
           </div>
 
           {/* Materials */}
-          <div className="text-center">
-            <div className="w-px h-12 bg-black/20 mx-auto mb-8" />
+          <div className="text-center group cursor-default transition-transform duration-300 hover:-translate-y-1">
+            <div className="w-px h-12 bg-black/20 mx-auto mb-8 group-hover:h-14 group-hover:bg-black/30 transition-all duration-300" />
             <h3
               className="text-2xl lg:text-3xl mb-4 tracking-tight"
               style={{ fontFamily: 'Cormorant, serif', fontWeight: 400 }}
@@ -38,8 +38,8 @@ export default function BrandEssence() {
           </div>
 
           {/* Timeless Design */}
-          <div className="text-center">
-            <div className="w-px h-12 bg-black/20 mx-auto mb-8" />
+          <div className="text-center group cursor-default transition-transform duration-300 hover:-translate-y-1">
+            <div className="w-px h-12 bg-black/20 mx-auto mb-8 group-hover:h-14 group-hover:bg-black/30 transition-all duration-300" />
             <h3
               className="text-2xl lg:text-3xl mb-4 tracking-tight"
               style={{ fontFamily: 'Cormorant, serif', fontWeight: 400 }}
