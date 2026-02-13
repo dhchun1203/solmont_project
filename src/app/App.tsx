@@ -8,6 +8,7 @@ import Sustainability from './components/Sustainability';
 import LookbookGallery from './components/LookbookGallery';
 import StoreStockist from './components/StoreStockist';
 import FinalCTA from './components/FinalCTA';
+import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -25,6 +26,7 @@ export default function App() {
         <LookbookGallery />
         <StoreStockist />
         <FinalCTA />
+        <ContactForm />
         <Footer />
       </main>
       <ScrollToTop />

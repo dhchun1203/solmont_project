@@ -7,12 +7,20 @@ export default function Header() {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     const target = document.querySelector(href);
-    target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (target) {
+      const header = document.querySelector('header');
+      // 네비게이션 바 높이만 사용 (모바일 확장 메뉴 제외, 메뉴 닫힌 후 기준)
+      const navBar = header?.querySelector(':scope > div:first-child');
+      const headerHeight = navBar?.getBoundingClientRect().height ?? header?.getBoundingClientRect().height ?? 80;
+      const targetRect = target.getBoundingClientRect();
+      const scrollTop = window.scrollY + targetRect.top - headerHeight;
+      window.scrollTo({ top: scrollTop, behavior: 'smooth' });
+    }
     setIsMenuOpen(false);
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 w-full bg-white/60 backdrop-blur-xl border-b border-white/30 shadow-[0_1px_0_0_rgba(255,255,255,0.5)_inset] transition-all duration-300 ease-out ${isMenuOpen ? 'rounded-b-2xl shadow-xl' : ''}`}>
+    <header className={`fixed top-0 left-0 right-0 z-50 w-full bg-white/70 backdrop-blur-xl border-b border-black/[0.08] shadow-[0_1px_0_0_rgba(255,255,255,0.5)_inset,0_2px_8px_rgba(0,0,0,0.04)] transition-all duration-300 ease-out ${isMenuOpen ? 'rounded-b-2xl shadow-xl' : ''}`}>
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 py-6 flex items-center justify-between">
         {/* Logo */}
         <a
@@ -41,7 +49,7 @@ export default function Header() {
           <a href="#stores" onClick={(e) => handleNavClick(e, '#stores')} className="text-sm tracking-wider hover:opacity-60 transition-opacity duration-300" style={{ fontFamily: 'Inter, sans-serif' }}>
             매장 안내
           </a>
-          <a href="#contact" onClick={(e) => handleNavClick(e, '#contact')} className="text-sm tracking-wider hover:opacity-60 transition-opacity duration-300" style={{ fontFamily: 'Inter, sans-serif' }}>
+          <a href="#inquiry" onClick={(e) => handleNavClick(e, '#inquiry')} className="text-sm tracking-wider hover:opacity-60 transition-opacity duration-300" style={{ fontFamily: 'Inter, sans-serif' }}>
             문의
           </a>
         </div>
@@ -89,9 +97,9 @@ export default function Header() {
               <a href="#stores" onClick={(e) => handleNavClick(e, '#stores')} className="text-sm tracking-wider hover:opacity-60 transition-opacity duration-300" style={{ fontFamily: 'Inter, sans-serif' }}>
                 매장 안내
               </a>
-              <a href="#contact" onClick={(e) => handleNavClick(e, '#contact')} className="text-sm tracking-wider hover:opacity-60 transition-opacity duration-300" style={{ fontFamily: 'Inter, sans-serif' }}>
-                문의
-              </a>
+<a href="#inquiry" onClick={(e) => handleNavClick(e, '#inquiry')} className="text-sm tracking-wider hover:opacity-60 transition-opacity duration-300" style={{ fontFamily: 'Inter, sans-serif' }}>
+              문의
+            </a>
               <a
                 href="#lookbook"
                 onClick={(e) => handleNavClick(e, '#lookbook')}

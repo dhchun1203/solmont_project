@@ -84,7 +84,7 @@ export default function StoreStockist() {
         {/* CTA */}
         <div className="text-center mt-16">
           <a
-            href="#contact"
+            href="#inquiry"
             className="inline-block px-8 py-4 border border-black text-black text-sm tracking-widest hover:bg-black hover:text-white active:scale-95 transition-all duration-300"
             style={{ fontFamily: 'Inter, sans-serif' }}
           >

@@ -79,24 +79,20 @@ export default function Footer() {
               문의
             </h4>
             <div className="space-y-3">
-              <a
-                href="mailto:info@solmont.com"
-                className="flex items-center gap-2 text-sm hover:opacity-60 transition-opacity duration-300"
+              <span
+                className="flex items-center gap-2 text-sm cursor-default pointer-events-none"
                 style={{ fontFamily: 'Inter, sans-serif', fontWeight: 300 }}
               >
                 <Mail size={16} />
                 info@solmont.com
-              </a>
-              <a
-                href="https://instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 text-sm hover:opacity-60 transition-opacity duration-300"
+              </span>
+              <span
+                className="flex items-center gap-2 text-sm cursor-default pointer-events-none"
                 style={{ fontFamily: 'Inter, sans-serif', fontWeight: 300 }}
               >
                 <Instagram size={16} />
                 @solmont
-              </a>
+              </span>
             </div>
             <p
               className="text-sm opacity-60 mt-6"

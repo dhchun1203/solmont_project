@@ -55,6 +55,14 @@ footer[id] {
   scroll-margin-top: 5rem;
 }
 
+/* 폼 입력 필드 텍스트 선택 허용 */
+input, textarea {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
 /* 모바일 메뉴 확장 애니메이션 */
 @keyframes mobileMenuExpand {
   from {

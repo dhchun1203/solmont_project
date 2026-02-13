@@ -1,6 +1,6 @@
 export default function BrandEssence() {
   return (
-    <section className="py-24 lg:py-32 bg-white">
+    <section id="brand-essence" className="py-24 lg:py-32 bg-white">
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-20">
           {/* Tailoring */}
